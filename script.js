@@ -65,6 +65,12 @@ for (let i = 0; i < 42; i++) {
       } else {
         const winner = check == 1 ? "Red" : "Yellow";
         result.innerHTML = `${winner} is the Winner.`;
+
+        alert(`${winner} is the Winner.`);
+
+        setTimeout(() => {
+          stop();
+        }, 300);
         return;
       }
     }
@@ -91,6 +97,12 @@ for (let i = 0; i < 42; i++) {
           const winner = check == 1 ? "Red" : "Yellow";
 
           result.innerHTML = `${winner} is the Winner.`;
+
+          alert(`${winner} is the Winner.`);
+          setTimeout(() => {
+            stop();
+          }, 300);
+
           return;
         }
       }
@@ -135,6 +147,8 @@ function stop() {
 
   single_btn.disabled = false;
   double_btn.disabled = false;
+
+  result.innerHTML = "It's Red turn";
 
   for (let i = 0; i < 42; i++) {
     const element = cell[i];
