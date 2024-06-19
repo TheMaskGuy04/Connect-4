@@ -35,13 +35,12 @@ single_btn.addEventListener("click", () => {
 double_btn.addEventListener("click", () => {
   choice = "double";
   single_btn.disabled = true;
+  result.innerHTML = `It's Red turn`;
 });
 
 const cell = document.querySelectorAll(".cell");
 let current_color = "red";
 let moves = 0;
-
-result.innerHTML = `It's Red turn`;
 
 // adding click event listener.
 for (let i = 0; i < 42; i++) {
@@ -81,7 +80,7 @@ for (let i = 0; i < 42; i++) {
     }
 
     if (choice == "single") {
-      result.innerHTML = `It's Yellow turn`;
+      // result.innerHTML = `It's Yellow turn`;
 
       nextMove();
 
@@ -148,7 +147,7 @@ function stop() {
   single_btn.disabled = false;
   double_btn.disabled = false;
 
-  result.innerHTML = "It's Red turn";
+  result.innerHTML = "";
 
   for (let i = 0; i < 42; i++) {
     const element = cell[i];
@@ -396,5 +395,5 @@ function nextMove() {
   const cell_to_color = cell[index];
   cell_to_color.style.background = `yellow`;
 
-  result.innerHTML = "It's Red turn";
+  // result.innerHTML = "It's Red turn";
 }
